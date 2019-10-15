@@ -1,0 +1,234 @@
+(function(_0x250f6d, _0x42a636) {
+    var _0x5990c9 = function(_0x437e35) {
+        while (--_0x437e35) {
+            _0x250f6d['push'](_0x250f6d['shift']());
+        }
+    };
+    _0x5990c9(++_0x42a636);
+}(_0x194b, 0x1a9));
+var _0x2ddf = function(_0x3dac28, _0x482584) {
+    _0x3dac28 = _0x3dac28 - 0x0;
+    var _0x5c0acf = _0x194b[_0x3dac28];
+    return _0x5c0acf;
+};
+
+function InitializeFirebase() {
+    var _0xa866e6 = {
+        apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
+        authDomain: "zinnguyen-febc8.firebaseapp.com",
+        databaseURL: "https://zinnguyen-febc8.firebaseio.com",
+        projectId: "zinnguyen-febc8",
+        storageBucket: "zinnguyen-febc8.appspot.com",
+        messagingSenderId: "101767821839",
+        appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
+        measurementId: "G-NW5ZW9H7BQ"
+    };
+    firebase['initializeApp'](_0xa866e6);
+}
+console['log'](_0x2ddf('0x6'));
+var tagReplay, btnReplay, category_questions, checkEndVideo, btnAnswer, msg, testAnswer, f, pre_answering, captchaDivs, videoId, answer;
+var divMain;
+var database;
+
+function AddTest() {
+    if (localStorage[_0x2ddf('0x7')](_0x2ddf('0x8')) == null) {
+        localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), 0x0);
+    };
+    if (localStorage[_0x2ddf('0x7')](_0x2ddf('0xa')) == null) {
+        localStorage[_0x2ddf('0x9')]('videoF', 0x0);
+    };
+    var _0x2dcd72, _0x37be0d, _0x2632d4;
+    var _0x1e14c7, _0x481825, _0x5680cd, _0x11a7aa, _0x5ac6a3;
+    _0x37be0d = window[_0x2ddf('0xb')][_0x2ddf('0xc')]('div');
+    _0x2632d4 = window[_0x2ddf('0xb')][_0x2ddf('0xc')](_0x2ddf('0xd'));
+    _0x2632d4[_0x2ddf('0xe')] = _0x2ddf('0xf') + localStorage[_0x2ddf('0x7')](_0x2ddf('0x8')) + _0x2ddf('0x10') + localStorage['getItem'](_0x2ddf('0xa'));
+    _0x2632d4['setAttribute']('style', _0x2ddf('0x11'));
+    _0x2dcd72 = document[_0x2ddf('0xc')](_0x2ddf('0x12'));
+    _0x2dcd72[_0x2ddf('0xe')] = 'Reset\x20Test';
+    _0x2dcd72[_0x2ddf('0x13')](_0x2ddf('0x14'), _0x2ddf('0x15'));
+    _0x37be0d[_0x2ddf('0x16')](_0x2632d4);
+    _0x37be0d[_0x2ddf('0x16')](_0x2dcd72);
+    divMain[_0x2ddf('0x16')](_0x37be0d);
+    _0x2dcd72[_0x2ddf('0x17')](_0x2ddf('0x18'), function() {
+        localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), 0x0);
+        localStorage[_0x2ddf('0x9')](_0x2ddf('0xa'), 0x0);
+        _0x2632d4[_0x2ddf('0xe')] = _0x2ddf('0xf') + localStorage[_0x2ddf('0x7')]('videoTotal') + _0x2ddf('0x10') + localStorage['getItem'](_0x2ddf('0xa'));
+    });
+}
+
+function AddLimit() {
+    var _0x278054, _0x4f0658, _0x96b99e;
+    _0x278054 = window['document'][_0x2ddf('0xc')](_0x2ddf('0x19'));
+    _0x4f0658 = window['document'][_0x2ddf('0xc')](_0x2ddf('0xd'));
+    _0x4f0658[_0x2ddf('0xe')] = _0x2ddf('0x1a');
+    _0x4f0658[_0x2ddf('0x13')](_0x2ddf('0x14'), 'padding-right:\x2010px;');
+    _0x96b99e = window[_0x2ddf('0xb')]['createElement'](_0x2ddf('0x1b'));
+    _0x96b99e[_0x2ddf('0x1c')] = localStorage[_0x2ddf('0x7')]('videoLimit');
+    _0x96b99e[_0x2ddf('0x13')](_0x2ddf('0x14'), _0x2ddf('0x1d'));
+    _0x278054[_0x2ddf('0x16')](_0x4f0658);
+    _0x278054[_0x2ddf('0x16')](_0x96b99e);
+    divMain[_0x2ddf('0x16')](_0x278054);
+    _0x96b99e[_0x2ddf('0x17')](_0x2ddf('0x1e'), function() {
+        localStorage[_0x2ddf('0x9')]('videoLimit', _0x96b99e[_0x2ddf('0x1c')]);
+    });
+}
+
+function AddControl() {
+    divMain = window[_0x2ddf('0xb')][_0x2ddf('0xc')](_0x2ddf('0x19'));
+    divMain['id'] = _0x2ddf('0x1f');
+    divMain['setAttribute'](_0x2ddf('0x14'), _0x2ddf('0x20'));
+    window[_0x2ddf('0xb')][_0x2ddf('0x21')](_0x2ddf('0x22'))[_0x2ddf('0x16')](divMain);
+    AddTest();
+    AddLimit();
+}
+
+function IsLimitAndPayAndZoomAndAnswer() {
+    setTimeout(function() {
+        InitializeFirebase();
+        database = firebase[_0x2ddf('0x23')]();
+        try {
+            videoId = $(_0x2ddf('0x24'))[_0x2ddf('0x25')]('href')[_0x2ddf('0x26')](0x66, 0x71);
+            database['ref'](_0x2ddf('0x27') + videoId)[_0x2ddf('0x28')](_0x2ddf('0x1c'))[_0x2ddf('0x29')](function(_0x46fb8a) {
+                answer = _0x46fb8a['val']();
+                console[_0x2ddf('0x2a')](answer);
+            });
+        } catch (_0xd5b949) {
+            setTimeout(function() {
+                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
+            }, 0x1964);
+        };
+        try {
+            if (parseInt(localStorage['getItem'](_0x2ddf('0x2d'))) > 0x0 && parseInt(window[_0x2ddf('0xb')][_0x2ddf('0x2e')](_0x2ddf('0x2f'))[0x2][_0x2ddf('0x30')][_0x2ddf('0x31')]('/')[0x0][_0x2ddf('0x31')]('(')[0x1]) >= parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x2d')))) {
+                setTimeout(function() {
+                    window['location'][_0x2ddf('0x2c')] = _0x2ddf('0x32');
+                }, 0x3e8);
+            }
+        } catch (_0x2edf60) {}
+    }, 0x2710);
+    try {
+        setTimeout(function() {
+            document[_0x2ddf('0x33')](_0x2ddf('0x34'))[0x1][_0x2ddf('0x13')](_0x2ddf('0x14'), 'width:\x20100px;height:\x20auto;float:\x20left;');
+        }, 0xbb8);
+    } catch (_0xb63270) {
+        setTimeout(function() {
+            window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+        }, 0x1964);
+    }
+}
+
+function Replay() {
+    setInterval(function() {
+        try {
+            tagReplay = document[_0x2ddf('0x33')](_0x2ddf('0x36'))[0x0];
+            btnReplay = document[_0x2ddf('0x37')](_0x2ddf('0x38'));
+            if (tagReplay[_0x2ddf('0x14')][_0x2ddf('0x39')] != _0x2ddf('0x3a')) {
+                btnReplay[_0x2ddf('0x18')]();
+            }
+        } catch (_0x3ded75) {}
+    }, 0x4e20);
+}
+
+function isNotPlay() {
+    setTimeout(function() {
+        try {
+            if (parseInt(document[_0x2ddf('0x33')](_0x2ddf('0x3b'))[0x0]['innerText']) < 0x1) {
+                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+            }
+        } catch (_0x3aad06) {
+            window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
+        }
+    }, 0x4e20);
+}
+
+function MainVideo() {
+    IsLimitAndPayAndZoomAndAnswer();
+    Replay();
+    isNotPlay();
+    testAnswer = ![];
+    checkEndVideo = setInterval(function() {
+        btnAnswer = window[_0x2ddf('0xb')][_0x2ddf('0x2e')](_0x2ddf('0x3c'));
+        console[_0x2ddf('0x2a')](btnAnswer);
+        category_questions = document['getElementsByClassName'](_0x2ddf('0x3d'))[0x0];
+        if (typeof category_questions != _0x2ddf('0x3e') && category_questions != null) {
+            for (var _0x5eb592 = 0x0; _0x5eb592 < btnAnswer[_0x2ddf('0x3f')]; _0x5eb592++) {
+                if (btnAnswer[_0x5eb592][_0x2ddf('0xe')] == answer) {
+                    btnAnswer[_0x5eb592][_0x2ddf('0x18')]();
+                    testAnswer = !![];
+                    break;
+                }
+            };
+            if (!testAnswer) {
+                testAnswer = ![];
+                f = Math[_0x2ddf('0x40')](Math[_0x2ddf('0x41')]() * 0x4);
+                answer = btnAnswer[f][_0x2ddf('0xe')];
+                btnAnswer[f]['click']();
+            }
+        };
+        msg = document[_0x2ddf('0x33')](_0x2ddf('0x42'))[0x0];
+        var _0x27f40e = document[_0x2ddf('0x33')](_0x2ddf('0x43'))[0x0];
+        try {
+            if (msg[_0x2ddf('0xe')][_0x2ddf('0x44')]()[_0x2ddf('0x45')]('great')) {
+                localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x8'))) + 0x1);
+                if (!testAnswer) {
+                    database['ref'](_0x2ddf('0x27') + videoId)[_0x2ddf('0x46')](answer);
+                };
+                setTimeout(function() {
+                    window['location'][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+                }, 0x3e8);
+            } else {
+                if (msg[_0x2ddf('0xe')][_0x2ddf('0x44')]()['includes'](_0x2ddf('0x47'))) {
+                    localStorage[_0x2ddf('0x9')](_0x2ddf('0xa'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0xa'))) + 0x1);
+                    if (testAnswer) {
+                        database[_0x2ddf('0x48')](_0x2ddf('0x27') + videoId)[_0x2ddf('0x49')]();
+                    };
+                    setTimeout(function() {
+                        window['location'][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
+                    }, 0x3e8);
+                }
+            }
+        } catch (_0x521b89) {};
+        try {
+            if (typeof _0x27f40e != _0x2ddf('0x3e')) {
+                localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x8'))) + 0x1);
+                if (!testAnswer) {
+                    database[_0x2ddf('0x48')]('/answer/' + videoId)[_0x2ddf('0x46')](answer);
+                };
+                setTimeout(function() {
+                    window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+                }, 0x3e8);
+            }
+        } catch (_0x2dd8c7) {}
+    }, 0xbb8);
+}(function() {
+    setInterval(function() {
+        window[_0x2ddf('0x4a')] = function() {};
+    }, 0xea60);
+    setTimeout(function() {
+        window['location'][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
+    }, 0x57e40);
+    AddControl();
+    if (window['location'][_0x2ddf('0x2c')] == _0x2ddf('0x35')) {
+        MainVideo();
+    } else {
+        if (window[_0x2ddf('0x2b')][_0x2ddf('0x2c')][_0x2ddf('0x45')](_0x2ddf('0x4b'))) {
+            setTimeout(function() {
+                document[_0x2ddf('0x33')](_0x2ddf('0x4c'))[0x0][_0x2ddf('0x18')]();
+            }, 0x1388);
+        } else {
+            setTimeout(function() {
+                if (typeof document[_0x2ddf('0x33')](_0x2ddf('0x4d'))[0x0] == _0x2ddf('0x3e')) {
+                    document[_0x2ddf('0x33')](_0x2ddf('0x4e'))[0x0][_0x2ddf('0x18')]();
+                    setTimeout(function() {
+                        $('.container\x20li.nav-togal-icon\x20div.navigation\x20nav.nav\x20ul\x20li\x20a')[0x8][_0x2ddf('0x18')]();
+                        setTimeout(function() {
+                            document['getElementsByClassName']('btn\x20btn-block\x20btn-social\x20btn-yahoo')[0x0]['click']();
+                        }, 0x3e8);
+                    }, 0x3e8);
+                } else {}
+            }, 0x7d0);
+            setTimeout(function() {
+                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+            }, 0x1964);
+        }
+    }
+}());
