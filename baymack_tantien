@@ -1,234 +1,220 @@
-(function(_0x250f6d, _0x42a636) {
-    var _0x5990c9 = function(_0x437e35) {
-        while (--_0x437e35) {
-            _0x250f6d['push'](_0x250f6d['shift']());
-        }
-    };
-    _0x5990c9(++_0x42a636);
-}(_0x194b, 0x1a9));
-var _0x2ddf = function(_0x3dac28, _0x482584) {
-    _0x3dac28 = _0x3dac28 - 0x0;
-    var _0x5c0acf = _0x194b[_0x3dac28];
-    return _0x5c0acf;
-};
-
 function InitializeFirebase() {
-    var _0xa866e6 = {
-        apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
-        authDomain: "zinnguyen-febc8.firebaseapp.com",
-        databaseURL: "https://zinnguyen-febc8.firebaseio.com",
-        projectId: "zinnguyen-febc8",
-        storageBucket: "zinnguyen-febc8.appspot.com",
-        messagingSenderId: "101767821839",
-        appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
-        measurementId: "G-NW5ZW9H7BQ"
+    var _0xe661x2 = {
+       apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
+       authDomain: "zinnguyen-febc8.firebaseapp.com",
+       databaseURL: "https://zinnguyen-febc8.firebaseio.com",
+       projectId: "zinnguyen-febc8",
+       storageBucket: "zinnguyen-febc8.appspot.com",
+       messagingSenderId: "101767821839",
+       appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
+       measurementId: "G-NW5ZW9H7BQ"
     };
-    firebase['initializeApp'](_0xa866e6);
+    firebase['initializeApp'](_0xe661x2)
 }
-console['log'](_0x2ddf('0x6'));
+console['log']('update baymack: 11.9.2019');
 var tagReplay, btnReplay, category_questions, checkEndVideo, btnAnswer, msg, testAnswer, f, pre_answering, captchaDivs, videoId, answer;
 var divMain;
 var database;
 
 function AddTest() {
-    if (localStorage[_0x2ddf('0x7')](_0x2ddf('0x8')) == null) {
-        localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), 0x0);
+    if (localStorage['getItem']('videoTotal') == null) {
+        localStorage['setItem']('videoTotal', 0)
     };
-    if (localStorage[_0x2ddf('0x7')](_0x2ddf('0xa')) == null) {
-        localStorage[_0x2ddf('0x9')]('videoF', 0x0);
+    if (localStorage['getItem']('videoF') == null) {
+        localStorage['setItem']('videoF', 0)
     };
-    var _0x2dcd72, _0x37be0d, _0x2632d4;
-    var _0x1e14c7, _0x481825, _0x5680cd, _0x11a7aa, _0x5ac6a3;
-    _0x37be0d = window[_0x2ddf('0xb')][_0x2ddf('0xc')]('div');
-    _0x2632d4 = window[_0x2ddf('0xb')][_0x2ddf('0xc')](_0x2ddf('0xd'));
-    _0x2632d4[_0x2ddf('0xe')] = _0x2ddf('0xf') + localStorage[_0x2ddf('0x7')](_0x2ddf('0x8')) + _0x2ddf('0x10') + localStorage['getItem'](_0x2ddf('0xa'));
-    _0x2632d4['setAttribute']('style', _0x2ddf('0x11'));
-    _0x2dcd72 = document[_0x2ddf('0xc')](_0x2ddf('0x12'));
-    _0x2dcd72[_0x2ddf('0xe')] = 'Reset\x20Test';
-    _0x2dcd72[_0x2ddf('0x13')](_0x2ddf('0x14'), _0x2ddf('0x15'));
-    _0x37be0d[_0x2ddf('0x16')](_0x2632d4);
-    _0x37be0d[_0x2ddf('0x16')](_0x2dcd72);
-    divMain[_0x2ddf('0x16')](_0x37be0d);
-    _0x2dcd72[_0x2ddf('0x17')](_0x2ddf('0x18'), function() {
-        localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), 0x0);
-        localStorage[_0x2ddf('0x9')](_0x2ddf('0xa'), 0x0);
-        _0x2632d4[_0x2ddf('0xe')] = _0x2ddf('0xf') + localStorage[_0x2ddf('0x7')]('videoTotal') + _0x2ddf('0x10') + localStorage['getItem'](_0x2ddf('0xa'));
-    });
+    var _0xe661x12, _0xe661x13, _0xe661x14;
+    var _0xe661x15, _0xe661x16, _0xe661x17, _0xe661x18, _0xe661x19;
+    _0xe661x13 = window['document']['createElement']('div');
+    _0xe661x14 = window['document']['createElement']('label');
+    _0xe661x14['innerHTML'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF');
+    _0xe661x14['setAttribute']('style', 'padding-right: 10px;');
+    _0xe661x12 = document['createElement']('button');
+    _0xe661x12['innerHTML'] = 'Reset Test';
+    _0xe661x12['setAttribute']('style', 'color: black;');
+    _0xe661x13['appendChild'](_0xe661x14);
+    _0xe661x13['appendChild'](_0xe661x12);
+    divMain['appendChild'](_0xe661x13);
+    _0xe661x12['addEventListener']('click', function() {
+        localStorage['setItem']('videoTotal', 0);
+        localStorage['setItem']('videoF', 0);
+        _0xe661x14['innerHTML'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF')
+    })
 }
 
 function AddLimit() {
-    var _0x278054, _0x4f0658, _0x96b99e;
-    _0x278054 = window['document'][_0x2ddf('0xc')](_0x2ddf('0x19'));
-    _0x4f0658 = window['document'][_0x2ddf('0xc')](_0x2ddf('0xd'));
-    _0x4f0658[_0x2ddf('0xe')] = _0x2ddf('0x1a');
-    _0x4f0658[_0x2ddf('0x13')](_0x2ddf('0x14'), 'padding-right:\x2010px;');
-    _0x96b99e = window[_0x2ddf('0xb')]['createElement'](_0x2ddf('0x1b'));
-    _0x96b99e[_0x2ddf('0x1c')] = localStorage[_0x2ddf('0x7')]('videoLimit');
-    _0x96b99e[_0x2ddf('0x13')](_0x2ddf('0x14'), _0x2ddf('0x1d'));
-    _0x278054[_0x2ddf('0x16')](_0x4f0658);
-    _0x278054[_0x2ddf('0x16')](_0x96b99e);
-    divMain[_0x2ddf('0x16')](_0x278054);
-    _0x96b99e[_0x2ddf('0x17')](_0x2ddf('0x1e'), function() {
-        localStorage[_0x2ddf('0x9')]('videoLimit', _0x96b99e[_0x2ddf('0x1c')]);
-    });
+    var _0xe661x1b, _0xe661x1c, _0xe661x1d;
+    _0xe661x1b = window['document']['createElement']('div');
+    _0xe661x1c = window['document']['createElement']('label');
+    _0xe661x1c['innerHTML'] = 'Limit';
+    _0xe661x1c['setAttribute']('style', 'padding-right: 10px;');
+    _0xe661x1d = window['document']['createElement']('input');
+    _0xe661x1d['value'] = localStorage['getItem']('videoLimit');
+    _0xe661x1d['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
+    _0xe661x1b['appendChild'](_0xe661x1c);
+    _0xe661x1b['appendChild'](_0xe661x1d);
+    divMain['appendChild'](_0xe661x1b);
+    _0xe661x1d['addEventListener']('change', function() {
+        localStorage['setItem']('videoLimit', _0xe661x1d['value'])
+    })
 }
 
 function AddControl() {
-    divMain = window[_0x2ddf('0xb')][_0x2ddf('0xc')](_0x2ddf('0x19'));
-    divMain['id'] = _0x2ddf('0x1f');
-    divMain['setAttribute'](_0x2ddf('0x14'), _0x2ddf('0x20'));
-    window[_0x2ddf('0xb')][_0x2ddf('0x21')](_0x2ddf('0x22'))[_0x2ddf('0x16')](divMain);
+    divMain = window['document']['createElement']('div');
+    divMain['id'] = 'divMain';
+    divMain['setAttribute']('style', 'color: #ffbe00;position: fixed;top: 0px;z-index: 999999999;font-weight: bold;background-color: black; padding: 10px;');
+    window['document']['querySelector']('body')['appendChild'](divMain);
     AddTest();
-    AddLimit();
+    AddLimit()
 }
 
 function IsLimitAndPayAndZoomAndAnswer() {
     setTimeout(function() {
         InitializeFirebase();
-        database = firebase[_0x2ddf('0x23')]();
+        database = firebase['database']();
         try {
-            videoId = $(_0x2ddf('0x24'))[_0x2ddf('0x25')]('href')[_0x2ddf('0x26')](0x66, 0x71);
-            database['ref'](_0x2ddf('0x27') + videoId)[_0x2ddf('0x28')](_0x2ddf('0x1c'))[_0x2ddf('0x29')](function(_0x46fb8a) {
-                answer = _0x46fb8a['val']();
-                console[_0x2ddf('0x2a')](answer);
-            });
-        } catch (_0xd5b949) {
+            videoId = $('.container .share_links .twitter')['attr']('href')['slice'](102, 113);
+            database['ref']('/answer/' + videoId)['once']('value')['then'](function(_0xe661x20) {
+                answer = _0xe661x20['val']();
+                console['log'](answer)
+            })
+        } catch (e) {
             setTimeout(function() {
-                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
-            }, 0x1964);
+                window['location']['href'] = 'https://www.baymack.com/vids'
+            }, 6500)
         };
         try {
-            if (parseInt(localStorage['getItem'](_0x2ddf('0x2d'))) > 0x0 && parseInt(window[_0x2ddf('0xb')][_0x2ddf('0x2e')](_0x2ddf('0x2f'))[0x2][_0x2ddf('0x30')][_0x2ddf('0x31')]('/')[0x0][_0x2ddf('0x31')]('(')[0x1]) >= parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x2d')))) {
+            if (parseInt(localStorage['getItem']('videoLimit')) > 0 && parseInt(window['document']['querySelectorAll']('#header > .pink_strip_homepage > span > a > span')[2]['innerText']['split']('/')[0]['split']('(')[1]) >= parseInt(localStorage['getItem']('videoLimit'))) {
                 setTimeout(function() {
-                    window['location'][_0x2ddf('0x2c')] = _0x2ddf('0x32');
-                }, 0x3e8);
+                    window['location']['href'] = 'about:blank'
+                }, 1000)
             }
-        } catch (_0x2edf60) {}
-    }, 0x2710);
+        } catch (e) {}
+    }, 10000);
     try {
         setTimeout(function() {
-            document[_0x2ddf('0x33')](_0x2ddf('0x34'))[0x1][_0x2ddf('0x13')](_0x2ddf('0x14'), 'width:\x20100px;height:\x20auto;float:\x20left;');
-        }, 0xbb8);
-    } catch (_0xb63270) {
+            document['getElementsByClassName']('container')[1]['setAttribute']('style', 'width: 100px;height: auto;float: left;')
+        }, 3000)
+    } catch (e) {
         setTimeout(function() {
-            window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
-        }, 0x1964);
+            window['location']['href'] = 'https://www.baymack.com/vids'
+        }, 6500)
     }
 }
 
 function Replay() {
     setInterval(function() {
         try {
-            tagReplay = document[_0x2ddf('0x33')](_0x2ddf('0x36'))[0x0];
-            btnReplay = document[_0x2ddf('0x37')](_0x2ddf('0x38'));
-            if (tagReplay[_0x2ddf('0x14')][_0x2ddf('0x39')] != _0x2ddf('0x3a')) {
-                btnReplay[_0x2ddf('0x18')]();
+            tagReplay = document['getElementsByClassName']('video-ov-div')[0];
+            btnReplay = document['getElementById']('replay_video');
+            if (tagReplay['style']['display'] != 'none') {
+                btnReplay['click']()
             }
-        } catch (_0x3ded75) {}
-    }, 0x4e20);
+        } catch (e) {}
+    }, 20000)
 }
 
 function isNotPlay() {
     setTimeout(function() {
         try {
-            if (parseInt(document[_0x2ddf('0x33')](_0x2ddf('0x3b'))[0x0]['innerText']) < 0x1) {
-                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
+            if (parseInt(document['getElementsByClassName']('video-page-current-duration')[0]['innerText']) < 1) {
+                window['location']['href'] = 'https://www.baymack.com/vids'
             }
-        } catch (_0x3aad06) {
-            window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
+        } catch (e) {
+            window['location']['href'] = 'https://www.baymack.com/vids'
         }
-    }, 0x4e20);
+    }, 20000)
 }
 
 function MainVideo() {
     IsLimitAndPayAndZoomAndAnswer();
     Replay();
     isNotPlay();
-    testAnswer = ![];
+    testAnswer = false;
     checkEndVideo = setInterval(function() {
-        btnAnswer = window[_0x2ddf('0xb')][_0x2ddf('0x2e')](_0x2ddf('0x3c'));
-        console[_0x2ddf('0x2a')](btnAnswer);
-        category_questions = document['getElementsByClassName'](_0x2ddf('0x3d'))[0x0];
-        if (typeof category_questions != _0x2ddf('0x3e') && category_questions != null) {
-            for (var _0x5eb592 = 0x0; _0x5eb592 < btnAnswer[_0x2ddf('0x3f')]; _0x5eb592++) {
-                if (btnAnswer[_0x5eb592][_0x2ddf('0xe')] == answer) {
-                    btnAnswer[_0x5eb592][_0x2ddf('0x18')]();
-                    testAnswer = !![];
-                    break;
+        btnAnswer = window['document']['querySelectorAll']('#body .video-category.video-category-questions-div ul.link-btn-list > li > a ');
+        console['log'](btnAnswer);
+        category_questions = document['getElementsByClassName']('video-category video-category-questions-div')[0];
+        if (typeof(category_questions) != 'undefined' && category_questions != null) {
+            for (var _0xe661x24 = 0; _0xe661x24 < btnAnswer['length']; _0xe661x24++) {
+                if (btnAnswer[_0xe661x24]['innerHTML'] == answer) {
+                    btnAnswer[_0xe661x24]['click']();
+                    testAnswer = true;
+                    break
                 }
             };
             if (!testAnswer) {
-                testAnswer = ![];
-                f = Math[_0x2ddf('0x40')](Math[_0x2ddf('0x41')]() * 0x4);
-                answer = btnAnswer[f][_0x2ddf('0xe')];
-                btnAnswer[f]['click']();
+                testAnswer = false;
+                f = Math['floor'](Math['random']() * 4);
+                answer = btnAnswer[f]['innerHTML'];
+                btnAnswer[f]['click']()
             }
         };
-        msg = document[_0x2ddf('0x33')](_0x2ddf('0x42'))[0x0];
-        var _0x27f40e = document[_0x2ddf('0x33')](_0x2ddf('0x43'))[0x0];
+        msg = document['getElementsByClassName']('watch-vdo-msg')[0];
+        var _0xe661x25 = document['getElementsByClassName']('themeBtn greenBtn')[0];
         try {
-            if (msg[_0x2ddf('0xe')][_0x2ddf('0x44')]()[_0x2ddf('0x45')]('great')) {
-                localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x8'))) + 0x1);
+            if (msg['innerHTML']['toLowerCase']()['includes']('great')) {
+                localStorage['setItem']('videoTotal', parseInt(localStorage['getItem']('videoTotal')) + 1);
                 if (!testAnswer) {
-                    database['ref'](_0x2ddf('0x27') + videoId)[_0x2ddf('0x46')](answer);
+                    database['ref']('/answer/' + videoId)['set'](answer)
                 };
                 setTimeout(function() {
-                    window['location'][_0x2ddf('0x2c')] = _0x2ddf('0x35');
-                }, 0x3e8);
+                    window['location']['href'] = 'https://www.baymack.com/vids'
+                }, 1000)
             } else {
-                if (msg[_0x2ddf('0xe')][_0x2ddf('0x44')]()['includes'](_0x2ddf('0x47'))) {
-                    localStorage[_0x2ddf('0x9')](_0x2ddf('0xa'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0xa'))) + 0x1);
+                if (msg['innerHTML']['toLowerCase']()['includes']('wrong')) {
+                    localStorage['setItem']('videoF', parseInt(localStorage['getItem']('videoF')) + 1);
                     if (testAnswer) {
-                        database[_0x2ddf('0x48')](_0x2ddf('0x27') + videoId)[_0x2ddf('0x49')]();
+                        database['ref']('/answer/' + videoId)['remove']()
                     };
                     setTimeout(function() {
-                        window['location'][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
-                    }, 0x3e8);
+                        window['location']['href'] = 'https://www.baymack.com/vids'
+                    }, 1000)
                 }
             }
-        } catch (_0x521b89) {};
+        } catch (e) {};
         try {
-            if (typeof _0x27f40e != _0x2ddf('0x3e')) {
-                localStorage[_0x2ddf('0x9')](_0x2ddf('0x8'), parseInt(localStorage[_0x2ddf('0x7')](_0x2ddf('0x8'))) + 0x1);
+            if ((typeof(_0xe661x25) != 'undefined')) {
+                localStorage['setItem']('videoTotal', parseInt(localStorage['getItem']('videoTotal')) + 1);
                 if (!testAnswer) {
-                    database[_0x2ddf('0x48')]('/answer/' + videoId)[_0x2ddf('0x46')](answer);
+                    database['ref']('/answer/' + videoId)['set'](answer)
                 };
                 setTimeout(function() {
-                    window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
-                }, 0x3e8);
+                    window['location']['href'] = 'https://www.baymack.com/vids'
+                }, 1000)
             }
-        } catch (_0x2dd8c7) {}
-    }, 0xbb8);
+        } catch (e) {}
+    }, 3000)
 }(function() {
     setInterval(function() {
-        window[_0x2ddf('0x4a')] = function() {};
-    }, 0xea60);
+        window['alert'] = function() {}
+    }, 60000);
     setTimeout(function() {
-        window['location'][_0x2ddf('0x2c')] = 'https://www.baymack.com/vids';
-    }, 0x57e40);
+        window['location']['href'] = 'https://www.baymack.com/vids'
+    }, 360000);
     AddControl();
-    if (window['location'][_0x2ddf('0x2c')] == _0x2ddf('0x35')) {
-        MainVideo();
+    if (window['location']['href'] == 'https://www.baymack.com/vids') {
+        MainVideo()
     } else {
-        if (window[_0x2ddf('0x2b')][_0x2ddf('0x2c')][_0x2ddf('0x45')](_0x2ddf('0x4b'))) {
+        if (window['location']['href']['includes']('api.login.yahoo.com')) {
             setTimeout(function() {
-                document[_0x2ddf('0x33')](_0x2ddf('0x4c'))[0x0][_0x2ddf('0x18')]();
-            }, 0x1388);
+                document['getElementsByClassName']('pure-button puree-button-primary oauth2-authorize-button')[0]['click']()
+            }, 5000)
         } else {
             setTimeout(function() {
-                if (typeof document[_0x2ddf('0x33')](_0x2ddf('0x4d'))[0x0] == _0x2ddf('0x3e')) {
-                    document[_0x2ddf('0x33')](_0x2ddf('0x4e'))[0x0][_0x2ddf('0x18')]();
+                if (typeof(document['getElementsByClassName']('profile-name')[0]) == 'undefined') {
+                    document['getElementsByClassName']('nav-togal-icon')[0]['click']();
                     setTimeout(function() {
-                        $('.container\x20li.nav-togal-icon\x20div.navigation\x20nav.nav\x20ul\x20li\x20a')[0x8][_0x2ddf('0x18')]();
+                        $('.container li.nav-togal-icon div.navigation nav.nav ul li a')[9]['click']();
                         setTimeout(function() {
-                            document['getElementsByClassName']('btn\x20btn-block\x20btn-social\x20btn-yahoo')[0x0]['click']();
-                        }, 0x3e8);
-                    }, 0x3e8);
+                            document['getElementsByClassName']('btn btn-block btn-social btn-yahoo')[0]['click']()
+                        }, 1000)
+                    }, 1000)
                 } else {}
-            }, 0x7d0);
+            }, 2000);
             setTimeout(function() {
-                window[_0x2ddf('0x2b')][_0x2ddf('0x2c')] = _0x2ddf('0x35');
-            }, 0x1964);
+                window['location']['href'] = 'https://www.baymack.com/vids'
+            }, 6500)
         }
     }
-}());
+})()
