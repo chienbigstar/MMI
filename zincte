@@ -1,5 +1,5 @@
 function InitializeFirebase() {
-    var _0x6861x2 = {
+    var _0x57f1x2 = {
         apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
         authDomain: "zinnguyen-febc8.firebaseapp.com",
         databaseURL: "https://zinnguyen-febc8.firebaseio.com",
@@ -8,10 +8,10 @@ function InitializeFirebase() {
         messagingSenderId: "101767821839",
         appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
         measurementId: "G-NW5ZW9H7BQ"
-     };
-    firebase['initializeApp'](_0x6861x2)
+      };
+    firebase['initializeApp'](_0x57f1x2)
 }
-console['log']('update snuckls: 23.10.2019');
+console['log']('update snuckls: 05.11.2019');
 var tagReplay, btnReplay, time, category_questions, checkEndVideo, btnAnswer, msg, testAnswer, f, pre_answering, captchaDivs, videoId, answer;
 var divMain;
 var database;
@@ -23,122 +23,133 @@ function AddTest() {
     if (localStorage['getItem']('videoF') == null) {
         localStorage['setItem']('videoF', 0)
     };
-    var _0x6861x13, _0x6861x14, _0x6861x15;
-    var _0x6861x16, _0x6861x17, _0x6861x18, _0x6861x19, _0x6861x1a;
-    _0x6861x14 = window['document']['createElement']('div');
-    _0x6861x15 = window['document']['createElement']('label');
-    _0x6861x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF');
-    _0x6861x15['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x13 = document['createElement']('button');
-    _0x6861x13['id'] = 'resetTest';
-    _0x6861x13['innerText'] = 'Reset Test';
-    _0x6861x13['setAttribute']('style', 'color: black;');
-    _0x6861x14['appendChild'](_0x6861x15);
-    _0x6861x14['appendChild'](_0x6861x13);
-    divMain['appendChild'](_0x6861x14);
-    _0x6861x13['addEventListener']('click', function() {
+    var _0x57f1x13, _0x57f1x14, _0x57f1x15;
+    var _0x57f1x16, _0x57f1x17, _0x57f1x18, _0x57f1x19, _0x57f1x1a;
+    _0x57f1x14 = window['document']['createElement']('div');
+    _0x57f1x15 = window['document']['createElement']('label');
+    _0x57f1x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF');
+    _0x57f1x15['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x13 = document['createElement']('button');
+    _0x57f1x13['id'] = 'resetTest';
+    _0x57f1x13['innerText'] = 'Reset Test';
+    _0x57f1x13['setAttribute']('style', 'color: black;');
+    _0x57f1x14['appendChild'](_0x57f1x15);
+    _0x57f1x14['appendChild'](_0x57f1x13);
+    divMain['appendChild'](_0x57f1x14);
+    _0x57f1x13['addEventListener']('click', function() {
         localStorage['setItem']('videoTotal', 0);
         localStorage['setItem']('videoF', 0);
-        _0x6861x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF')
+        _0x57f1x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF')
     })
 }
 
 function AddLimit() {
-    var _0x6861x1c, _0x6861x1d, _0x6861x1e;
-    _0x6861x1c = window['document']['createElement']('div');
-    _0x6861x1d = window['document']['createElement']('label');
-    _0x6861x1d['innerText'] = 'Limit';
-    _0x6861x1d['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x1e = window['document']['createElement']('input');
-    _0x6861x1e['id'] = 'limit';
-    _0x6861x1e['value'] = localStorage['getItem']('videoLimit');
-    _0x6861x1e['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
-    _0x6861x1c['appendChild'](_0x6861x1d);
-    _0x6861x1c['appendChild'](_0x6861x1e);
-    divMain['appendChild'](_0x6861x1c);
-    _0x6861x1e['addEventListener']('change', function() {
-        localStorage['setItem']('videoLimit', _0x6861x1e['value'])
+    var _0x57f1x1c, _0x57f1x1d, _0x57f1x1e;
+    _0x57f1x1c = window['document']['createElement']('div');
+    _0x57f1x1d = window['document']['createElement']('label');
+    _0x57f1x1d['innerText'] = 'Limit';
+    _0x57f1x1d['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x1e = window['document']['createElement']('input');
+    _0x57f1x1e['id'] = 'limit';
+    _0x57f1x1e['value'] = localStorage['getItem']('videoLimit');
+    _0x57f1x1e['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
+    _0x57f1x1c['appendChild'](_0x57f1x1d);
+    _0x57f1x1c['appendChild'](_0x57f1x1e);
+    divMain['appendChild'](_0x57f1x1c);
+    _0x57f1x1e['addEventListener']('change', function() {
+        localStorage['setItem']('videoLimit', _0x57f1x1e['value'])
     })
 }
 
 function AddSpin() {
-    var _0x6861x20, _0x6861x21, _0x6861x22;
-    _0x6861x20 = window['document']['createElement']('div');
-    _0x6861x21 = window['document']['createElement']('label');
-    _0x6861x21['innerText'] = 'Auto Spin';
-    _0x6861x21['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x22 = window['document']['createElement']('input');
-    _0x6861x22['id'] = 'isSpin';
-    _0x6861x22['type'] = 'checkbox';
-    _0x6861x22['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
-    _0x6861x22['checked'] = JSON['parse'](localStorage['getItem']('isSpin'));
-    _0x6861x20['appendChild'](_0x6861x21);
-    _0x6861x20['appendChild'](_0x6861x22);
-    divMain['appendChild'](_0x6861x20);
-    _0x6861x22['addEventListener']('change', function() {
-        localStorage['setItem']('isSpin', _0x6861x22['checked'])
+    var _0x57f1x20, _0x57f1x21, _0x57f1x22;
+    _0x57f1x20 = window['document']['createElement']('div');
+    _0x57f1x21 = window['document']['createElement']('label');
+    _0x57f1x21['innerText'] = 'Auto Spin';
+    _0x57f1x21['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x22 = window['document']['createElement']('input');
+    _0x57f1x22['id'] = 'isSpin';
+    _0x57f1x22['type'] = 'checkbox';
+    _0x57f1x22['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
+    _0x57f1x22['checked'] = JSON['parse'](localStorage['getItem']('isSpin'));
+    _0x57f1x20['appendChild'](_0x57f1x21);
+    _0x57f1x20['appendChild'](_0x57f1x22);
+    divMain['appendChild'](_0x57f1x20);
+    _0x57f1x22['addEventListener']('change', function() {
+        localStorage['setItem']('isSpin', _0x57f1x22['checked'])
     })
 }
 
 function AddPay() {
-    var _0x6861x24, _0x6861x25, _0x6861x26, _0x6861x27, _0x6861x28, _0x6861x29, _0x6861x2a, _0x6861x2b, _0x6861x2c;
-    _0x6861x24 = window['document']['createElement']('div');
-    _0x6861x25 = window['document']['createElement']('label');
-    _0x6861x25['innerText'] = 'Auto Pay';
-    _0x6861x25['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x26 = window['document']['createElement']('input');
-    _0x6861x26['id'] = 'isAutoPay';
-    _0x6861x26['type'] = 'checkbox';
-    _0x6861x26['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
-    _0x6861x26['checked'] = JSON['parse'](localStorage['getItem']('isAutoPay'));
-    _0x6861x24['appendChild'](_0x6861x25);
-    _0x6861x24['appendChild'](_0x6861x26);
-    divMain['appendChild'](_0x6861x24);
-    _0x6861x27 = window['document']['createElement']('div');
-    _0x6861x28 = window['document']['createElement']('label');
-    _0x6861x28['innerText'] = 'Min Pay';
-    _0x6861x28['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x29 = window['document']['createElement']('input');
-    _0x6861x29['id'] = 'minPay';
-    _0x6861x29['value'] = localStorage['getItem']('minPay');
-    _0x6861x29['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
-    _0x6861x2a = window['document']['createElement']('div');
-    _0x6861x2b = window['document']['createElement']('label');
-    _0x6861x2b['innerText'] = 'Mail';
-    _0x6861x2b['setAttribute']('style', 'padding-right: 10px;');
-    _0x6861x2c = window['document']['createElement']('input');
-    _0x6861x2c['id'] = 'mail';
-    _0x6861x2c['value'] = localStorage['getItem']('mail');
-    _0x6861x2c['setAttribute']('style', 'width: 250px;color: black;margin-right: 10px;');
-    if (_0x6861x26['checked']) {
-        _0x6861x27['style']['display'] = 'block';
-        _0x6861x2a['style']['display'] = 'block'
+    var _0x57f1x24, _0x57f1x25, _0x57f1x26, _0x57f1x27, _0x57f1x28, _0x57f1x29, _0x57f1x2a, _0x57f1x2b, _0x57f1x2c;
+    _0x57f1x24 = window['document']['createElement']('div');
+    _0x57f1x25 = window['document']['createElement']('label');
+    _0x57f1x25['innerText'] = 'Auto Pay';
+    _0x57f1x25['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x26 = window['document']['createElement']('input');
+    _0x57f1x26['id'] = 'isAutoPay';
+    _0x57f1x26['type'] = 'checkbox';
+    _0x57f1x26['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
+    _0x57f1x26['checked'] = JSON['parse'](localStorage['getItem']('isAutoPay'));
+    _0x57f1x24['appendChild'](_0x57f1x25);
+    _0x57f1x24['appendChild'](_0x57f1x26);
+    divMain['appendChild'](_0x57f1x24);
+    _0x57f1x27 = window['document']['createElement']('div');
+    _0x57f1x28 = window['document']['createElement']('label');
+    _0x57f1x28['innerText'] = 'Min Pay';
+    _0x57f1x28['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x29 = window['document']['createElement']('input');
+    _0x57f1x29['id'] = 'minPay';
+    _0x57f1x29['value'] = localStorage['getItem']('minPay');
+    _0x57f1x29['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
+    _0x57f1x2a = window['document']['createElement']('div');
+    _0x57f1x2b = window['document']['createElement']('label');
+    _0x57f1x2b['innerText'] = 'Mail';
+    _0x57f1x2b['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x2c = window['document']['createElement']('input');
+    _0x57f1x2c['id'] = 'mail';
+    _0x57f1x2c['value'] = localStorage['getItem']('mail');
+    _0x57f1x2c['setAttribute']('style', 'width: 250px;color: black;margin-right: 10px;');
+    if (_0x57f1x26['checked']) {
+        _0x57f1x27['style']['display'] = 'block';
+        _0x57f1x2a['style']['display'] = 'block'
     } else {
-        _0x6861x27['style']['display'] = 'none';
-        _0x6861x2a['style']['display'] = 'none'
+        _0x57f1x27['style']['display'] = 'none';
+        _0x57f1x2a['style']['display'] = 'none'
     };
-    _0x6861x27['appendChild'](_0x6861x28);
-    _0x6861x27['appendChild'](_0x6861x29);
-    _0x6861x2a['appendChild'](_0x6861x2b);
-    _0x6861x2a['appendChild'](_0x6861x2c);
-    divMain['appendChild'](_0x6861x27);
-    divMain['appendChild'](_0x6861x2a);
-    _0x6861x26['addEventListener']('change', function() {
-        localStorage['setItem']('isAutoPay', _0x6861x26['checked']);
-        if (_0x6861x26['checked']) {
-            _0x6861x27['style']['display'] = 'block';
-            _0x6861x2a['style']['display'] = 'block'
+    _0x57f1x27['appendChild'](_0x57f1x28);
+    _0x57f1x27['appendChild'](_0x57f1x29);
+    _0x57f1x2a['appendChild'](_0x57f1x2b);
+    _0x57f1x2a['appendChild'](_0x57f1x2c);
+    divMain['appendChild'](_0x57f1x27);
+    divMain['appendChild'](_0x57f1x2a);
+    _0x57f1x26['addEventListener']('change', function() {
+        localStorage['setItem']('isAutoPay', _0x57f1x26['checked']);
+        if (_0x57f1x26['checked']) {
+            _0x57f1x27['style']['display'] = 'block';
+            _0x57f1x2a['style']['display'] = 'block'
         } else {
-            _0x6861x27['style']['display'] = 'none';
-            _0x6861x2a['style']['display'] = 'none'
+            _0x57f1x27['style']['display'] = 'none';
+            _0x57f1x2a['style']['display'] = 'none'
         }
     });
-    _0x6861x29['addEventListener']('change', function() {
-        localStorage['setItem']('minPay', _0x6861x29['value'])
+    _0x57f1x29['addEventListener']('change', function() {
+        localStorage['setItem']('minPay', _0x57f1x29['value'])
     });
-    _0x6861x2c['addEventListener']('change', function() {
-        localStorage['setItem']('mail', _0x6861x2c['value'])
+    _0x57f1x2c['addEventListener']('change', function() {
+        localStorage['setItem']('mail', _0x57f1x2c['value'])
     })
+}
+
+function AddAnswer() {
+    var _0x57f1x2e, _0x57f1x2f;
+    _0x57f1x2e = window['document']['createElement']('div');
+    _0x57f1x2f = window['document']['createElement']('label');
+    _0x57f1x2f['id'] = 'lbAnswer';
+    _0x57f1x2f['innerHTML'] = 'Answer: ';
+    _0x57f1x2f['setAttribute']('style', 'padding-right: 10px;');
+    _0x57f1x2e['appendChild'](_0x57f1x2f);
+    divMain['appendChild'](_0x57f1x2e)
 }
 
 function AddControl() {
@@ -149,7 +160,8 @@ function AddControl() {
     AddTest();
     AddLimit();
     AddSpin();
-    AddPay()
+    AddPay();
+    AddAnswer()
 }
 
 function IsLimitAndPayAndZoomAndAnswer() {
@@ -158,10 +170,12 @@ function IsLimitAndPayAndZoomAndAnswer() {
         database = firebase['database']();
         try {
             videoId = $('.share_links')['attr']('href')['split']('=')[1];
-            console['log'](videoId);
-            database['ref']('/snuckls/' + videoId)['once']('value')['then'](function(_0x6861x2f) {
-                answer = _0x6861x2f['val']();
-                console['log'](answer)
+            localStorage['setItem']('answer', '');
+            localStorage['setItem']('videoId', videoId);
+            database['ref']('/answer/' + videoId)['once']('value')['then'](function(_0x57f1x32) {
+                answer = _0x57f1x32['val']();
+                document['getElementById']('lbAnswer')['innerHTML'] = 'Answer: ' + answer;
+                localStorage['setItem']('answer', answer)
             })
         } catch (e) {
             setTimeout(function() {
@@ -197,11 +211,13 @@ function ReplayAndSpin() {
             tagReplay = document['getElementsByClassName']('video-ov-div')[0];
             btnReplay = document['getElementById']('replay_video');
             if (tagReplay['style']['display'] != 'none') {
+                btnReplay['focus']();
                 btnReplay['click']()
             }
         } catch (e) {};
         try {
             if (parseInt(document['getElementById']('spinsLeft')['innerText']) >= 1 && JSON['parse'](localStorage['getItem']('isSpin'))) {
+                document['getElementById']('spin')['focus']();
                 document['getElementById']('spin')['click']()
             }
         } catch (e) {}
@@ -229,35 +245,37 @@ function MainVideo() {
     category_questions = document['getElementsByClassName']('video-category video-category-questions-div')[0];
     captchaDivs = document['getElementsByClassName']('captchaDivs')[0];
     btnAnswer = [];
-    var _0x6861x33 = window['document']['querySelectorAll']('#body .video-category.video-category-questions-div ul.link-btn-list > li > a');
-    for (var _0x6861x34 = 0; _0x6861x34 < _0x6861x33['length']; _0x6861x34++) {
-        if (_0x6861x33[_0x6861x34]['className'] != 'border-btn') {
-            btnAnswer['push'](_0x6861x33[_0x6861x34])
+    var _0x57f1x36 = window['document']['querySelectorAll']('#body .video-category.video-category-questions-div ul.link-btn-list > li > a');
+    for (var _0x57f1x37 = 0; _0x57f1x37 < _0x57f1x36['length']; _0x57f1x37++) {
+        if (_0x57f1x36[_0x57f1x37]['className'] != 'border-btn') {
+            btnAnswer['push'](_0x57f1x36[_0x57f1x37])
         }
     };
     msg = document['getElementsByClassName']('watch-vdo-msg')[0];
     testAnswer = false;
-    var _0x6861x35 = true;
+    var _0x57f1x38 = true;
     checkEndVideo = setInterval(function() {
         if (captchaDivs['style']['display'] == 'block') {
-            _0x6861x35 = false;
+            _0x57f1x38 = false;
             setTimeout(function() {
+                document['getElementById']('submitPHPCaptcha')['focus']();
                 document['getElementById']('submitPHPCaptcha')['click']()
             }, 10000)
         };
         if (category_questions['style']['display'] == 'block' && pre_answering['style']['display'] != 'none' && captchaDivs['style']['display'] == 'none') {
-            for (var _0x6861x36 = 0; _0x6861x36 < btnAnswer['length']; _0x6861x36++) {
-                console['log'](btnAnswer[_0x6861x36]['innerText']['trim']());
-                if (btnAnswer[_0x6861x36]['innerText']['trim']() == answer) {
-                    btnAnswer[_0x6861x36]['click']();
+            answer = localStorage['getItem']('answer')['trim']();
+            for (var _0x57f1x39 = 0; _0x57f1x39 < btnAnswer['length']; _0x57f1x39++) {
+                if (btnAnswer[_0x57f1x39]['innerText']['trim']() == answer) {
+                    btnAnswer[_0x57f1x39]['focus']();
+                    btnAnswer[_0x57f1x39]['click']();
                     testAnswer = true;
                     break
                 }
             };
             if (!testAnswer) {
                 f = Math['floor'](Math['random']() * 4);
-                console['log']('random: ' + btnAnswer[f]['innerText']);
                 answer = btnAnswer[f]['innerText'];
+                btnAnswer[f]['focus']();
                 btnAnswer[f]['click']()
             }
         };
@@ -265,7 +283,7 @@ function MainVideo() {
             clearInterval(checkEndVideo);
             localStorage['setItem']('videoTotal', parseInt(localStorage['getItem']('videoTotal')) + 1);
             if (!testAnswer) {
-                database['ref']('/snuckls/' + videoId)['set'](answer)
+                database['ref']('/answer/' + videoId)['set'](answer)
             };
             setTimeout(function() {
                 window['location']['href'] = 'https://www.snuckls.com/videos'
@@ -274,8 +292,8 @@ function MainVideo() {
             if (msg['innerText']['toLowerCase']()['includes']('wrong')) {
                 clearInterval(checkEndVideo);
                 localStorage['setItem']('videoF', parseInt(localStorage['getItem']('videoF')) + 1);
-                if (testAnswer && _0x6861x35) {
-                    database['ref']('/snuckls/' + videoId)['remove']()
+                if (testAnswer && _0x57f1x38) {
+                    database['ref']('/answer/' + videoId)['remove']()
                 };
                 setTimeout(function() {
                     window['location']['href'] = 'https://www.snuckls.com/videos'
@@ -292,10 +310,12 @@ function MainPay() {
     try {
         if (parseFloat(localStorage['getItem']('minPay')) <= parseFloat(document['getElementById']('balance')['innerText']) && JSON['parse'](localStorage['getItem']('isAutoPay'))) {
             setTimeout(function() {
+                document['getElementsByClassName']('redeemButton')[0]['focus']();
                 document['getElementsByClassName']('redeemButton')[0]['click']();
                 setTimeout(function() {
                     document['getElementById']('userEmail')['value'] = localStorage['getItem']('mail');
                     setTimeout(function() {
+                        document['getElementById']('subGiftCard')['focus']();
                         document['getElementById']('subGiftCard')['click']();
                         setTimeout(function() {
                             window['location']['href'] = 'https://www.snuckls.com/videos'
