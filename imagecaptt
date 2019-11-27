@@ -31,7 +31,7 @@ var checkCap = setInterval(function () {
 				},
 				"softId": 0,
 				"languagePool": "rn",
-				"clientKey": "3b5f89d13fca4575de63e676aca5cc10"
+				"clientKey": "9c341be9a6155fdeb8c0203dfbdeca5b"
 			};
 			$.ajax({
 				type: "POST",
@@ -52,7 +52,7 @@ var checkCap = setInterval(function () {
 		function check_result(_0xc8d7x8) {
 			var _0xc8d7x9 = {
 				"taskId": _0xc8d7x8,
-				"clientKey": "3b5f89d13fca4575de63e676aca5cc10"
+				"clientKey": "9c341be9a6155fdeb8c0203dfbdeca5b"
 			};
 			$.ajax({
 				type: "POST",
