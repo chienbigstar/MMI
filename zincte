@@ -1,5 +1,5 @@
 function InitializeFirebase() {
-    var _0x61c6x2 = {
+    var _0x7285x2 = {
         apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
         authDomain: "zinnguyen-febc8.firebaseapp.com",
         databaseURL: "https://zinnguyen-febc8.firebaseio.com",
@@ -9,7 +9,7 @@ function InitializeFirebase() {
         appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
         measurementId: "G-NW5ZW9H7BQ"
       };
-    firebase['initializeApp'](_0x61c6x2)
+    firebase['initializeApp'](_0x7285x2)
 }
 console['log']('update snuckls: 05.11.2019');
 var tagReplay, btnReplay, time, category_questions, checkEndVideo, btnAnswer, msg, testAnswer, f, pre_answering, captchaDivs, videoId, answer;
@@ -23,133 +23,133 @@ function AddTest() {
     if (localStorage['getItem']('videoF') == null) {
         localStorage['setItem']('videoF', 0)
     };
-    var _0x61c6x13, _0x61c6x14, _0x61c6x15;
-    var _0x61c6x16, _0x61c6x17, _0x61c6x18, _0x61c6x19, _0x61c6x1a;
-    _0x61c6x14 = window['document']['createElement']('div');
-    _0x61c6x15 = window['document']['createElement']('label');
-    _0x61c6x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF');
-    _0x61c6x15['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x13 = document['createElement']('button');
-    _0x61c6x13['id'] = 'resetTest';
-    _0x61c6x13['innerText'] = 'Reset Test';
-    _0x61c6x13['setAttribute']('style', 'color: black;');
-    _0x61c6x14['appendChild'](_0x61c6x15);
-    _0x61c6x14['appendChild'](_0x61c6x13);
-    divMain['appendChild'](_0x61c6x14);
-    _0x61c6x13['addEventListener']('click', function() {
+    var _0x7285x13, _0x7285x14, _0x7285x15;
+    var _0x7285x16, _0x7285x17, _0x7285x18, _0x7285x19, _0x7285x1a;
+    _0x7285x14 = window['document']['createElement']('div');
+    _0x7285x15 = window['document']['createElement']('label');
+    _0x7285x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF');
+    _0x7285x15['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x13 = document['createElement']('button');
+    _0x7285x13['id'] = 'resetTest';
+    _0x7285x13['innerText'] = 'Reset Test';
+    _0x7285x13['setAttribute']('style', 'color: black;');
+    _0x7285x14['appendChild'](_0x7285x15);
+    _0x7285x14['appendChild'](_0x7285x13);
+    divMain['appendChild'](_0x7285x14);
+    _0x7285x13['addEventListener']('click', function() {
         localStorage['setItem']('videoTotal', 0);
         localStorage['setItem']('videoF', 0);
-        _0x61c6x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF')
+        _0x7285x15['innerText'] = 'Video \u0111\xFAng: ' + localStorage['getItem']('videoTotal') + ' --- Video sai: ' + localStorage['getItem']('videoF')
     })
 }
 
 function AddLimit() {
-    var _0x61c6x1c, _0x61c6x1d, _0x61c6x1e;
-    _0x61c6x1c = window['document']['createElement']('div');
-    _0x61c6x1d = window['document']['createElement']('label');
-    _0x61c6x1d['innerText'] = 'Limit';
-    _0x61c6x1d['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x1e = window['document']['createElement']('input');
-    _0x61c6x1e['id'] = 'limit';
-    _0x61c6x1e['value'] = localStorage['getItem']('videoLimit');
-    _0x61c6x1e['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
-    _0x61c6x1c['appendChild'](_0x61c6x1d);
-    _0x61c6x1c['appendChild'](_0x61c6x1e);
-    divMain['appendChild'](_0x61c6x1c);
-    _0x61c6x1e['addEventListener']('change', function() {
-        localStorage['setItem']('videoLimit', _0x61c6x1e['value'])
+    var _0x7285x1c, _0x7285x1d, _0x7285x1e;
+    _0x7285x1c = window['document']['createElement']('div');
+    _0x7285x1d = window['document']['createElement']('label');
+    _0x7285x1d['innerText'] = 'Limit';
+    _0x7285x1d['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x1e = window['document']['createElement']('input');
+    _0x7285x1e['id'] = 'limit';
+    _0x7285x1e['value'] = localStorage['getItem']('videoLimit');
+    _0x7285x1e['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
+    _0x7285x1c['appendChild'](_0x7285x1d);
+    _0x7285x1c['appendChild'](_0x7285x1e);
+    divMain['appendChild'](_0x7285x1c);
+    _0x7285x1e['addEventListener']('change', function() {
+        localStorage['setItem']('videoLimit', _0x7285x1e['value'])
     })
 }
 
 function AddSpin() {
-    var _0x61c6x20, _0x61c6x21, _0x61c6x22;
-    _0x61c6x20 = window['document']['createElement']('div');
-    _0x61c6x21 = window['document']['createElement']('label');
-    _0x61c6x21['innerText'] = 'Auto Spin';
-    _0x61c6x21['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x22 = window['document']['createElement']('input');
-    _0x61c6x22['id'] = 'isSpin';
-    _0x61c6x22['type'] = 'checkbox';
-    _0x61c6x22['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
-    _0x61c6x22['checked'] = JSON['parse'](localStorage['getItem']('isSpin'));
-    _0x61c6x20['appendChild'](_0x61c6x21);
-    _0x61c6x20['appendChild'](_0x61c6x22);
-    divMain['appendChild'](_0x61c6x20);
-    _0x61c6x22['addEventListener']('change', function() {
-        localStorage['setItem']('isSpin', _0x61c6x22['checked'])
+    var _0x7285x20, _0x7285x21, _0x7285x22;
+    _0x7285x20 = window['document']['createElement']('div');
+    _0x7285x21 = window['document']['createElement']('label');
+    _0x7285x21['innerText'] = 'Auto Spin';
+    _0x7285x21['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x22 = window['document']['createElement']('input');
+    _0x7285x22['id'] = 'isSpin';
+    _0x7285x22['type'] = 'checkbox';
+    _0x7285x22['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
+    _0x7285x22['checked'] = JSON['parse'](localStorage['getItem']('isSpin'));
+    _0x7285x20['appendChild'](_0x7285x21);
+    _0x7285x20['appendChild'](_0x7285x22);
+    divMain['appendChild'](_0x7285x20);
+    _0x7285x22['addEventListener']('change', function() {
+        localStorage['setItem']('isSpin', _0x7285x22['checked'])
     })
 }
 
 function AddPay() {
-    var _0x61c6x24, _0x61c6x25, _0x61c6x26, _0x61c6x27, _0x61c6x28, _0x61c6x29, _0x61c6x2a, _0x61c6x2b, _0x61c6x2c;
-    _0x61c6x24 = window['document']['createElement']('div');
-    _0x61c6x25 = window['document']['createElement']('label');
-    _0x61c6x25['innerText'] = 'Auto Pay';
-    _0x61c6x25['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x26 = window['document']['createElement']('input');
-    _0x61c6x26['id'] = 'isAutoPay';
-    _0x61c6x26['type'] = 'checkbox';
-    _0x61c6x26['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
-    _0x61c6x26['checked'] = JSON['parse'](localStorage['getItem']('isAutoPay'));
-    _0x61c6x24['appendChild'](_0x61c6x25);
-    _0x61c6x24['appendChild'](_0x61c6x26);
-    divMain['appendChild'](_0x61c6x24);
-    _0x61c6x27 = window['document']['createElement']('div');
-    _0x61c6x28 = window['document']['createElement']('label');
-    _0x61c6x28['innerText'] = 'Min Pay';
-    _0x61c6x28['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x29 = window['document']['createElement']('input');
-    _0x61c6x29['id'] = 'minPay';
-    _0x61c6x29['value'] = localStorage['getItem']('minPay');
-    _0x61c6x29['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
-    _0x61c6x2a = window['document']['createElement']('div');
-    _0x61c6x2b = window['document']['createElement']('label');
-    _0x61c6x2b['innerText'] = 'Mail';
-    _0x61c6x2b['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x2c = window['document']['createElement']('input');
-    _0x61c6x2c['id'] = 'mail';
-    _0x61c6x2c['value'] = localStorage['getItem']('mail');
-    _0x61c6x2c['setAttribute']('style', 'width: 250px;color: black;margin-right: 10px;');
-    if (_0x61c6x26['checked']) {
-        _0x61c6x27['style']['display'] = 'block';
-        _0x61c6x2a['style']['display'] = 'block'
+    var _0x7285x24, _0x7285x25, _0x7285x26, _0x7285x27, _0x7285x28, _0x7285x29, _0x7285x2a, _0x7285x2b, _0x7285x2c;
+    _0x7285x24 = window['document']['createElement']('div');
+    _0x7285x25 = window['document']['createElement']('label');
+    _0x7285x25['innerText'] = 'Auto Pay';
+    _0x7285x25['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x26 = window['document']['createElement']('input');
+    _0x7285x26['id'] = 'isAutoPay';
+    _0x7285x26['type'] = 'checkbox';
+    _0x7285x26['setAttribute']('style', 'width: 15px;height: 15px;vertical-align: bottom;');
+    _0x7285x26['checked'] = JSON['parse'](localStorage['getItem']('isAutoPay'));
+    _0x7285x24['appendChild'](_0x7285x25);
+    _0x7285x24['appendChild'](_0x7285x26);
+    divMain['appendChild'](_0x7285x24);
+    _0x7285x27 = window['document']['createElement']('div');
+    _0x7285x28 = window['document']['createElement']('label');
+    _0x7285x28['innerText'] = 'Min Pay';
+    _0x7285x28['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x29 = window['document']['createElement']('input');
+    _0x7285x29['id'] = 'minPay';
+    _0x7285x29['value'] = localStorage['getItem']('minPay');
+    _0x7285x29['setAttribute']('style', 'width: 50px;color: black;margin-right: 10px;');
+    _0x7285x2a = window['document']['createElement']('div');
+    _0x7285x2b = window['document']['createElement']('label');
+    _0x7285x2b['innerText'] = 'Mail';
+    _0x7285x2b['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x2c = window['document']['createElement']('input');
+    _0x7285x2c['id'] = 'mail';
+    _0x7285x2c['value'] = localStorage['getItem']('mail');
+    _0x7285x2c['setAttribute']('style', 'width: 250px;color: black;margin-right: 10px;');
+    if (_0x7285x26['checked']) {
+        _0x7285x27['style']['display'] = 'block';
+        _0x7285x2a['style']['display'] = 'block'
     } else {
-        _0x61c6x27['style']['display'] = 'none';
-        _0x61c6x2a['style']['display'] = 'none'
+        _0x7285x27['style']['display'] = 'none';
+        _0x7285x2a['style']['display'] = 'none'
     };
-    _0x61c6x27['appendChild'](_0x61c6x28);
-    _0x61c6x27['appendChild'](_0x61c6x29);
-    _0x61c6x2a['appendChild'](_0x61c6x2b);
-    _0x61c6x2a['appendChild'](_0x61c6x2c);
-    divMain['appendChild'](_0x61c6x27);
-    divMain['appendChild'](_0x61c6x2a);
-    _0x61c6x26['addEventListener']('change', function() {
-        localStorage['setItem']('isAutoPay', _0x61c6x26['checked']);
-        if (_0x61c6x26['checked']) {
-            _0x61c6x27['style']['display'] = 'block';
-            _0x61c6x2a['style']['display'] = 'block'
+    _0x7285x27['appendChild'](_0x7285x28);
+    _0x7285x27['appendChild'](_0x7285x29);
+    _0x7285x2a['appendChild'](_0x7285x2b);
+    _0x7285x2a['appendChild'](_0x7285x2c);
+    divMain['appendChild'](_0x7285x27);
+    divMain['appendChild'](_0x7285x2a);
+    _0x7285x26['addEventListener']('change', function() {
+        localStorage['setItem']('isAutoPay', _0x7285x26['checked']);
+        if (_0x7285x26['checked']) {
+            _0x7285x27['style']['display'] = 'block';
+            _0x7285x2a['style']['display'] = 'block'
         } else {
-            _0x61c6x27['style']['display'] = 'none';
-            _0x61c6x2a['style']['display'] = 'none'
+            _0x7285x27['style']['display'] = 'none';
+            _0x7285x2a['style']['display'] = 'none'
         }
     });
-    _0x61c6x29['addEventListener']('change', function() {
-        localStorage['setItem']('minPay', _0x61c6x29['value'])
+    _0x7285x29['addEventListener']('change', function() {
+        localStorage['setItem']('minPay', _0x7285x29['value'])
     });
-    _0x61c6x2c['addEventListener']('change', function() {
-        localStorage['setItem']('mail', _0x61c6x2c['value'])
+    _0x7285x2c['addEventListener']('change', function() {
+        localStorage['setItem']('mail', _0x7285x2c['value'])
     })
 }
 
 function AddAnswer() {
-    var _0x61c6x2e, _0x61c6x2f;
-    _0x61c6x2e = window['document']['createElement']('div');
-    _0x61c6x2f = window['document']['createElement']('label');
-    _0x61c6x2f['id'] = 'lbAnswer';
-    _0x61c6x2f['innerHTML'] = 'Answer: ';
-    _0x61c6x2f['setAttribute']('style', 'padding-right: 10px;');
-    _0x61c6x2e['appendChild'](_0x61c6x2f);
-    divMain['appendChild'](_0x61c6x2e)
+    var _0x7285x2e, _0x7285x2f;
+    _0x7285x2e = window['document']['createElement']('div');
+    _0x7285x2f = window['document']['createElement']('label');
+    _0x7285x2f['id'] = 'lbAnswer';
+    _0x7285x2f['innerHTML'] = 'Answer: ';
+    _0x7285x2f['setAttribute']('style', 'padding-right: 10px;');
+    _0x7285x2e['appendChild'](_0x7285x2f);
+    divMain['appendChild'](_0x7285x2e)
 }
 
 function AddControl() {
@@ -172,8 +172,8 @@ function IsLimitAndPayAndZoomAndAnswer() {
             videoId = $('.share_links')['attr']('href')['split']('=')[1];
             localStorage['setItem']('answer', '');
             localStorage['setItem']('videoId', videoId);
-            database['ref']('/answer/' + videoId)['once']('value')['then'](function(_0x61c6x32) {
-                answer = _0x61c6x32['val']();
+            database['ref']('/answer/' + videoId)['once']('value')['then'](function(_0x7285x32) {
+                answer = _0x7285x32['val']();
                 document['getElementById']('lbAnswer')['innerHTML'] = 'Answer: ' + answer;
                 localStorage['setItem']('answer', answer)
             })
@@ -236,18 +236,18 @@ function MainVideo() {
     category_questions = document['getElementsByClassName']('video-category video-category-questions-div')[0];
     captchaDivs = document['getElementsByClassName']('captchaDivs')[0];
     btnAnswer = [];
-    var _0x61c6x36 = window['document']['querySelectorAll']('#body .video-category.video-category-questions-div ul.link-btn-list > li > a');
-    for (var _0x61c6x37 = 0; _0x61c6x37 < _0x61c6x36['length']; _0x61c6x37++) {
-        if (_0x61c6x36[_0x61c6x37]['className'] != 'border-btn') {
-            btnAnswer['push'](_0x61c6x36[_0x61c6x37])
+    var _0x7285x36 = window['document']['querySelectorAll']('#body .video-category.video-category-questions-div ul.link-btn-list > li > a');
+    for (var _0x7285x37 = 0; _0x7285x37 < _0x7285x36['length']; _0x7285x37++) {
+        if (_0x7285x36[_0x7285x37]['className'] != 'border-btn') {
+            btnAnswer['push'](_0x7285x36[_0x7285x37])
         }
     };
     msg = document['getElementsByClassName']('watch-vdo-msg')[0];
     testAnswer = false;
-    var _0x61c6x38 = true;
+    var _0x7285x38 = true;
     checkEndVideo = setInterval(function() {
         if (captchaDivs['style']['display'] == 'block') {
-            _0x61c6x38 = false;
+            _0x7285x38 = false;
             setTimeout(function() {
                 document['getElementById']('submitPHPCaptcha')['focus']();
                 document['getElementById']('submitPHPCaptcha')['click']()
@@ -255,10 +255,10 @@ function MainVideo() {
         };
         if (category_questions['style']['display'] == 'block' && pre_answering['style']['display'] != 'none' && captchaDivs['style']['display'] == 'none') {
             answer = localStorage['getItem']('answer')['trim']();
-            for (var _0x61c6x39 = 0; _0x61c6x39 < btnAnswer['length']; _0x61c6x39++) {
-                if (btnAnswer[_0x61c6x39]['innerText']['trim']() == answer) {
-                    btnAnswer[_0x61c6x39]['focus']();
-                    btnAnswer[_0x61c6x39]['click']();
+            for (var _0x7285x39 = 0; _0x7285x39 < btnAnswer['length']; _0x7285x39++) {
+                if (btnAnswer[_0x7285x39]['innerText']['trim']() == answer) {
+                    btnAnswer[_0x7285x39]['focus']();
+                    btnAnswer[_0x7285x39]['click']();
                     testAnswer = true;
                     break
                 }
@@ -283,7 +283,7 @@ function MainVideo() {
             if (msg['innerText']['toLowerCase']()['includes']('wrong')) {
                 clearInterval(checkEndVideo);
                 localStorage['setItem']('videoF', parseInt(localStorage['getItem']('videoF')) + 1);
-                if (testAnswer && _0x61c6x38) {
+                if (testAnswer && _0x7285x38) {
                     database['ref']('/answer/' + videoId)['remove']()
                 };
                 setTimeout(function() {
