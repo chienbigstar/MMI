@@ -1,14 +1,14 @@
 function InitializeFirebase() {
     var _0x61c6x2 = {
-        apiKey: 'AIzaSyAZv1JegE_mKoLTvx-CeOKR26fZwcpvEck',
-        authDomain: 'data-40-b53c0.firebaseapp.com',
-        databaseURL: 'https://data-40-b53c0.firebaseio.com',
-        projectId: 'data-40-b53c0',
-        storageBucket: 'data-40-b53c0.appspot.com',
-        messagingSenderId: '729422397496',
-        appId: '1:729422397496:web:f93d98bf6a75c997e766cd',
-        measurementId: 'G-TCFRWEH8FC'
-    };
+        apiKey: "AIzaSyDg-YssHqP-vUiC_4F1xKls0bk4r6aoua4",
+        authDomain: "zinnguyen-febc8.firebaseapp.com",
+        databaseURL: "https://zinnguyen-febc8.firebaseio.com",
+        projectId: "zinnguyen-febc8",
+        storageBucket: "zinnguyen-febc8.appspot.com",
+        messagingSenderId: "101767821839",
+        appId: "1:101767821839:web:8863c0b628ea2d9471c17a",
+        measurementId: "G-NW5ZW9H7BQ"
+      };
     firebase['initializeApp'](_0x61c6x2)
 }
 console['log']('update snuckls: 05.11.2019');
